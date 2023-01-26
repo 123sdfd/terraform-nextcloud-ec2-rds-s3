@@ -13,7 +13,7 @@ variable "nextcloud_instance_type" {
 
 variable "nextcloud_key_name" {
     description = "SSH key name to associate to the Nextcloud app instance"
-    default = null
+    default = "nextcloud01"
 }
 
 variable "db_instance_type" {
@@ -47,10 +47,12 @@ variable "db_cidr" {
 ############
 variable "db_user" {
   description = "Nextcloud database root user"
+  default = "khosro"
 }
 
 variable "db_pass" {
   description = "Nextcloud database root password"
+  default = "azerty000"
 }
 
 
@@ -60,10 +62,12 @@ variable "db_pass" {
 
 variable "admin_user" {
   description = "Nextcloud admin user"
+  default = "khosro"
 }
 
 variable "admin_pass" {
   description = "Nextcloud admin password"
+  default = "azerty000"
 }
 
 ################
@@ -72,10 +76,10 @@ variable "admin_pass" {
 
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket to use as datastore"
-  default = "nextcloud-datastore"
+  default = "nextcloudbucket0101bordeaux"
 }
 
 variable "force_datastore_destroy" {
   description = "Destroy all objects so that the bucket can be destroyed without error. These objects are not recoverable"
-  default = false
+  default = true
 }

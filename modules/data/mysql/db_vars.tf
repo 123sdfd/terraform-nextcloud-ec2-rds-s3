@@ -5,8 +5,10 @@ variable "db_name" {
 
 variable "db_user" {
   description = "Database user"
+  default = "khosro"
 }
 
 variable "db_pass" {
   description = "Database password"
+  default = "azerty000"
 }

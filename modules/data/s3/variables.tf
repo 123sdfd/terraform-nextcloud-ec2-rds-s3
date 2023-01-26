@@ -1,5 +1,6 @@
 variable "s3_bucket_name" {
     description = "Name of the S3 bucket to use as datastore"
+    default = "nextcloudbucket0101bordeaux"
 }
 
 variable "nextcloud_iam_user_arn" {

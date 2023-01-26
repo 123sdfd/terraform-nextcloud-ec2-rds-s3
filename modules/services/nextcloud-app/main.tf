@@ -1,10 +1,9 @@
 resource "aws_instance" "nextcloud_app_instance"{
-    ami = data.aws_ami.ubuntu_bionic_lts.id
+    ami = "ami-0c68b55d1c875067e"
     instance_type = var.instance_type
     vpc_security_group_ids = [aws_security_group.nextcloud_app_sg.id]
     subnet_id = var.subnet_id
-
-    key_name = var.key_name
+    key_name = "nextcloud01"
 
     tags = {
         Name = "Nextcloud app"
